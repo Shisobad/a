@@ -1,0 +1,1851 @@
+
+repeat wait() 
+
+until game:IsLoaded()
+repeat wait() 
+	if game:GetService("Players").LocalPlayer then
+		if game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui"):FindFirstChild("LoadingGUI") then
+			game:GetService("GuiService").SelectedObject = game:GetService("Players").LocalPlayer.PlayerGui.LoadingGUI.Play
+			task.wait(0.1)
+			game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.Return.Value, false, game)
+			task.wait(0.1)
+			game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.Return.Value, false, game)
+			task.wait(0.1)
+			game:GetService("GuiService").SelectedObject = nil
+			wait(1)
+		end
+	end
+until not game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui"):FindFirstChild("LoadingGUI") and game:IsLoaded()
+
+local KeyFileName = "HornyCat.json" -- change u file name
+_G.KeySuccess = false
+_G.RealKey = tostring(game:HttpGet("https://pastebin.com/raw/ep9drTdP"))
+_G.Vip = "F42F535DD5979D833CF32CEBB9BA9"
+
+if isfile("HornyCat.json") == false then
+	writefile(KeyFileName,tostring(""))
+end
+
+if tostring(readfile(KeyFileName)) == _G.RealKey or tostring(readfile(KeyFileName)) == _G.Vip then
+	_G.KeySuccess = true
+else
+	if game:GetService("CoreGui").RobloxGui.Sounds:FindFirstChild("RobloxSoundGui") then
+		game:GetService("CoreGui").RobloxGui.Sounds:FindFirstChild("RobloxSoundGui"):Destroy()
+	end
+	local ScreenGui = Instance.new("ScreenGui")
+	local Main = Instance.new("ImageLabel")
+	local Topbar = Instance.new("ImageLabel")
+	local Line = Instance.new("ImageLabel")
+	local Tittle = Instance.new("TextLabel")
+	local DropShadow = Instance.new("ImageLabel")
+	local KeyFrame = Instance.new("ImageLabel")
+	local KeyBox = Instance.new("TextBox")
+	local Button = Instance.new("TextButton")
+	local ButtonImage = Instance.new("ImageLabel")
+
+	--Properties:
+
+	_G.KeySuccess = false
+
+	ScreenGui.Parent = game:GetService("CoreGui").RobloxGui.Sounds
+	ScreenGui.Name = "RobloxSoundGui"
+
+	Main.Name = "Main"
+	Main.Parent = ScreenGui
+	Main.Active = true
+	Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Main.BackgroundTransparency = 1.000
+	Main.Position = UDim2.new(0.390225559, 0, 0.393019736, 0)
+	Main.Size = UDim2.new(0, 291, 0, 143)
+	Main.Image = "rbxassetid://3570695787"
+	Main.ImageColor3 = Color3.fromRGB(25, 25, 25)
+	Main.ScaleType = Enum.ScaleType.Slice
+	Main.SliceCenter = Rect.new(100, 100, 100, 100)
+	Main.SliceScale = 0.040
+
+	Topbar.Name = "Topbar"
+	Topbar.Parent = Main
+	Topbar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Topbar.BackgroundTransparency = 1.000
+	Topbar.Position = UDim2.new(0, 0, -0.230769232, 0)
+	Topbar.Size = UDim2.new(0, 291, 0, 39)
+	Topbar.Image = "rbxassetid://3570695787"
+	Topbar.ImageColor3 = Color3.fromRGB(30, 30, 30)
+	Topbar.ScaleType = Enum.ScaleType.Slice
+	Topbar.SliceCenter = Rect.new(100, 100, 100, 100)
+	Topbar.SliceScale = 0.040
+
+	Line.Name = "Line"
+	Line.Parent = Topbar
+	Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Line.BackgroundTransparency = 1.000
+	Line.Position = UDim2.new(0, 0, 1, 0)
+	Line.Size = UDim2.new(0, 291, 0, 1)
+	Line.Image = "rbxassetid://3570695787"
+	Line.ImageColor3 = Color3.fromRGB(45, 45, 45)
+	Line.ScaleType = Enum.ScaleType.Slice
+	Line.SliceCenter = Rect.new(100, 100, 100, 100)
+	Line.SliceScale = 0.040
+
+	Tittle.Name = "Tittle"
+	Tittle.Parent = Topbar
+	Tittle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Tittle.BackgroundTransparency = 1.000
+	Tittle.Position = UDim2.new(0.0240549836, 0, 0.230769247, 0)
+	Tittle.Size = UDim2.new(0, 112, 0, 20)
+	Tittle.Font = Enum.Font.Gotham
+	Tittle.Text = "Hyper | Key System"
+	Tittle.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Tittle.TextSize = 14.000
+	Tittle.TextXAlignment = Enum.TextXAlignment.Left
+
+	DropShadow.Name = "DropShadow"
+	DropShadow.Parent = Main
+	DropShadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	DropShadow.BackgroundTransparency = 1.000
+	DropShadow.Position = UDim2.new(-0.357388318, 0, -0.538461566, 0)
+	DropShadow.Size = UDim2.new(0, 495, 0, 263)
+	DropShadow.ZIndex = 0
+	DropShadow.Image = "rbxassetid://5587865193"
+	DropShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+
+	KeyFrame.Name = "KeyFrame"
+	KeyFrame.Parent = Main
+	KeyFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	KeyFrame.BackgroundTransparency = 1.000
+	KeyFrame.Position = UDim2.new(0.0240549836, 0, 0.2097902, 0)
+	KeyFrame.Size = UDim2.new(0, 277, 0, 31)
+	KeyFrame.Image = "rbxassetid://3570695787"
+	KeyFrame.ImageColor3 = Color3.fromRGB(20, 20, 20)
+	KeyFrame.ScaleType = Enum.ScaleType.Slice
+	KeyFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+	KeyFrame.SliceScale = 0.040
+
+	KeyBox.Name = "Kuybox"
+	KeyBox.Parent = KeyFrame
+	KeyBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	KeyBox.BackgroundTransparency = 1.000
+	KeyBox.Position = UDim2.new(0.0216606501, 0, 0, 0)
+	KeyBox.Size = UDim2.new(0, 271, 0, 31)
+	KeyBox.Font = Enum.Font.Gotham
+	KeyBox.PlaceholderText = "Enter your key here"
+	KeyBox.Text = ""
+	KeyBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+	KeyBox.TextSize = 12.000
+	KeyBox.TextWrapped = true
+	KeyBox.TextXAlignment = Enum.TextXAlignment.Left
+
+	Button.Name = "Button"
+	Button.Parent = Main
+	Button.AnchorPoint = Vector2.new(0.5, 0.5)
+	Button.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	Button.BackgroundTransparency = 1.000
+	Button.BorderColor3 = Color3.fromRGB(20, 20, 20)
+	Button.BorderSizePixel = 0
+	Button.Position = UDim2.new(0.491408944, 0, 0.594405591, 0)
+	Button.Size = UDim2.new(0, 200, 0, 31)
+	Button.ZIndex = 2
+	Button.Font = Enum.Font.Gotham
+	Button.Text = "Submit"
+	Button.TextColor3 = Color3.fromRGB(178, 178, 178)
+	Button.TextSize = 13.000
+
+	ButtonImage.Name = "ButtonImage"
+	ButtonImage.Parent = Button
+	ButtonImage.Active = true
+	ButtonImage.AnchorPoint = Vector2.new(0.5, 0.5)
+	ButtonImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ButtonImage.BackgroundTransparency = 1.000
+	ButtonImage.Position = UDim2.new(0.5, 0, 0.5, 0)
+	ButtonImage.Selectable = true
+	ButtonImage.Size = UDim2.new(1, 0, 1, 0)
+	ButtonImage.Image = "rbxassetid://3570695787"
+	ButtonImage.ImageColor3 = Color3.fromRGB(20, 20, 20)
+	ButtonImage.ScaleType = Enum.ScaleType.Slice
+	ButtonImage.SliceCenter = Rect.new(100, 100, 100, 100)
+	ButtonImage.SliceScale = 0.040
+
+	local ScreenGui2 = Instance.new("ScreenGui")
+	local FrameLink = Instance.new("Frame")
+	local TextButton = Instance.new("TextButton")
+	local TextButton_2 = Instance.new("TextButton")
+	local TextButton_3 = Instance.new("TextButton")
+
+	--Properties:
+
+	ScreenGui2.Parent = game.CoreGui
+	ScreenGui2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	FrameLink.Parent = ScreenGui2
+	FrameLink.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	FrameLink.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	FrameLink.BorderSizePixel = 0
+	FrameLink.Position = UDim2.new(0.411764711, 0, 0.654867232, 0)
+	FrameLink.Size = UDim2.new(0, 240, 0, 40)
+
+	TextButton.Parent = FrameLink
+	TextButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+	TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	TextButton.BorderSizePixel = 0
+	TextButton.Position = UDim2.new(0.629284799, 0, 0.2253685, 0)
+	TextButton.Size = UDim2.new(0, 87, 0, 20)
+	TextButton.Font = Enum.Font.Gotham
+	TextButton.Text = "Work.ink"
+	TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextButton.TextSize = 14.000
+	TextButton.MouseButton1Click:Connect(function()
+		setclipboard("https://work.ink/1Sii/lplb241k")
+		TextButton.Text = "Copied"
+		wait(1)
+		TextButton.Text = "Work.ink"
+	end)
+
+	TextButton_2.Parent = FrameLink
+	TextButton_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+	TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	TextButton_2.BorderSizePixel = 0
+	TextButton_2.Position = UDim2.new(0.3147735, 0, 0.2253685, 0)
+	TextButton_2.Size = UDim2.new(0, 87, 0, 20)
+	TextButton_2.Font = Enum.Font.Gotham
+	TextButton_2.Text = "LootLink"
+	TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextButton_2.TextSize = 14.000
+	TextButton_2.MouseButton1Click:Connect(function()
+		setclipboard("https://loot-link.com/s?43eeb7f4")
+		TextButton_2.Text = "Copied"
+		wait(1)
+		TextButton_2.Text = "LootLink"
+	end)
+
+	TextButton_3.Parent = FrameLink
+	TextButton_3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+	TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	TextButton_3.BorderSizePixel = 0
+	TextButton_3.Position = UDim2.new(-0.00135127199, 0, 0.2253685, 0)
+	TextButton_3.Size = UDim2.new(0, 87, 0, 20)
+	TextButton_3.Font = Enum.Font.Gotham
+	TextButton_3.Text = "Linkvertise"
+	TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextButton_3.TextSize = 14.000
+	TextButton_3.MouseButton1Click:Connect(function()
+		setclipboard("https://direct-link.net/369809/hyper")
+		TextButton_3.Text = "Copied"
+		wait(1)
+		TextButton_3.Text = "Linkvertise"
+	end)
+
+	-- Scripts:
+
+	local function JINADUU_fake_script() -- Main.Dragify 
+		local script = Instance.new('LocalScript', Main)
+
+		local UIS = game:GetService("UserInputService")
+		function dragify(Frame,obj)
+			dragToggle = nil
+			local dragSpeed = 0.50
+			dragInput = nil
+			dragStart = nil
+			local dragPos = nil
+			function updateInput(input)
+				local Delta = input.Position - dragStart
+				local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+				game:GetService("TweenService"):Create(obj, TweenInfo.new(0.30), {Position = Position}):Play()
+			end
+			Frame.InputBegan:Connect(function(input)
+				if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+					dragToggle = true
+					dragStart = input.Position
+					startPos = obj.Position
+					input.Changed:Connect(function()
+						if input.UserInputState == Enum.UserInputState.End then
+							dragToggle = false
+						end
+					end)
+				end
+			end)
+			Frame.InputChanged:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+					dragInput = input
+				end
+			end)
+			game:GetService("UserInputService").InputChanged:Connect(function(input)
+				if input == dragInput and dragToggle then
+					updateInput(input)
+				end
+			end)
+		end
+
+		dragify(script.Parent,script.Parent)
+		dragify(Topbar,script.Parent)
+	end
+	coroutine.wrap(JINADUU_fake_script)()
+	local function WFDCWQV_fake_script() -- ScreenGui.LocalScript 
+		local script = Instance.new('LocalScript', ScreenGui)
+
+		local Screen = script.Parent
+		local Main = script.Parent.Main
+		local Button = script.Parent.Main.Button
+		local ButtonImage = script.Parent.Main.Button.ButtonImage
+		local Topbar = script.Parent.Main.Topbar
+		local Line = script.Parent.Main.Topbar.Line
+		local Title = script.Parent.Main.Topbar.Tittle
+		local KeyFrame = script.Parent.Main.KeyFrame
+		local KeyBox = script.Parent.Main.KeyFrame.Kuybox
+		local Dropshadow = script.Parent.Main.DropShadow
+
+		local tweenService = game:GetService("TweenService")
+
+		Button.MouseEnter:Connect(function()
+			Button:TweenSize(UDim2.new(0, 277,0, 31), "Out", "Back", 0.25)
+		end)
+
+		Button.MouseLeave:Connect(function()
+			Button:TweenSize(UDim2.new(0, 200,0, 31), "Out", "Back", 0.25)
+		end)
+
+		local function typewrite(object,text,length)
+			for i = 1,#text,1 do
+				object.Text = string.sub(text,1,i)
+				wait(length)
+			end
+		end
+
+		Button.MouseButton1Click:Connect(function()
+			tweenService:Create(
+				Button,
+				TweenInfo.new(0.01, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),
+				{TextSize =  17} -- UDim2.new(0, 128, 0, 25)
+			):Play()
+			wait(0.01)
+			tweenService:Create(
+				Button,
+				TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),
+				{TextSize =  13} -- UDim2.new(0, 128, 0, 25)
+			):Play()
+			--keyhere
+			_G.PutKey = KeyBox.Text
+			if _G.PutKey == _G.RealKey or _G.PutKey ==  _G.Vip then
+				writefile(KeyFileName,tostring(_G.PutKey))
+				Title.TextTransparency = 0.7
+				wait(0.01)
+				Title.TextTransparency = 0.5
+				wait(0.01)
+				Title.TextTransparency = 0.3
+				wait(0.01)
+				Title.TextTransparency = 0
+				typewrite(Title,"Welcome to Script",0.01)
+				tweenService:Create(
+					Title,
+					TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),
+					{TextColor3 =  Color3.fromRGB(3, 252, 32)} -- UDim2.new(0, 128, 0, 25)
+				):Play()
+				wait(1)
+				Title.TextTransparency = 0.3
+				wait(0.01)
+				Title.TextTransparency = 0.5
+				wait(0.01)
+				Title.TextTransparency = 0.7
+				wait(0.01)
+				Title.TextTransparency = 1
+				wait(0.1)
+				KeyFrame.ImageTransparency = 0.3
+				KeyBox.Visible = false
+				wait(0.01)
+				KeyFrame.ImageTransparency = 0.5
+				wait(0.01)
+				KeyFrame.ImageTransparency = 0.7
+				wait(0.01)
+				KeyFrame.ImageTransparency = 1
+				wait(0.1)
+				ButtonImage.ImageTransparency = 0.3
+				Button.TextTransparency = 0.3
+				wait(0.01)
+				Button.TextTransparency = 0.5
+				ButtonImage.ImageTransparency = 0.5
+				wait(0.01)
+				Button.TextTransparency = 0.7
+				ButtonImage.ImageTransparency = 0.7
+				wait(0.01)
+				Button.TextTransparency = 1
+				ButtonImage.ImageTransparency = 1
+				wait(0.1)
+				Dropshadow.ImageTransparency = 0.3
+				wait(0.01)
+				Dropshadow.ImageTransparency = 0.5
+				wait(0.01)
+				Line.Visible = false
+				Dropshadow.ImageTransparency = 0.7
+				wait(0.01)
+				Dropshadow.ImageTransparency = 1
+				wait(0.1)
+				Main:TweenSize(UDim2.new(0, 291,0, 0), "Out", "Sine", 0.25)
+				wait(0.5)
+				Topbar:TweenSize(UDim2.new(0, 0,0, 39), "Out", "Sine", 0.25)
+				wait(0.5)
+				Screen:Destroy()
+				FrameLink:Destroy()
+				_G.KeySuccess = true
+			else
+				Title.TextTransparency = 0.7
+				wait(0.01)
+				Title.TextTransparency = 0.5
+				wait(0.01)
+				Title.TextTransparency = 0.3
+				wait(0.01)
+				Title.TextTransparency = 0
+				typewrite(Title,"Key Not Find. Try to get new Key",0.01)
+				wait(0.1)
+				tweenService:Create(
+					Title,
+					TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),
+					{TextColor3 =  Color3.fromRGB(252, 3, 3)} -- UDim2.new(0, 128, 0, 25)
+				):Play()
+				wait(1)
+				tweenService:Create(
+					Title,
+					TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),
+					{TextColor3 =  Color3.fromRGB(255, 255, 255)} -- UDim2.new(0, 128, 0, 25)
+				):Play()
+				wait(0.2)
+				typewrite(Title,"Hyper | Key System",0.01)
+				wait(0.2)
+			end
+		end)
+	end	
+	WFDCWQV_fake_script()
+	
+end
+
+repeat wait() until _G.KeySuccess == true
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+local Window = Fluent:CreateWindow({
+    Title = "Hyper Hab Script | "..GameName,
+    SubTitle = "by sHi.xyz",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(600, 400),
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Amethyst",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+})
+
+--Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
+local Tabs = {
+    Farm_Setting = Window:AddTab({ Title = "Farm Setting", Icon = "settings-2" }),
+	Level_Farm = Window:AddTab({ Title = "Level Farm", Icon = "activity" }),
+	bw1 = Window:AddTab({ Title = "Bosses World 1", Icon = "sword" }),
+	bw2 = Window:AddTab({ Title = "Bosses World 2", Icon = "swords" }),
+	bw3 = Window:AddTab({ Title = "Bosses World 3", Icon = "axe" }),
+	island = Window:AddTab({ Title = "Island", Icon = "mountain" }),
+	tab_player= Window:AddTab({ Title = "LocalPlayer", Icon = "person-standing" }),
+	raid = Window:AddTab({ Title = "Raid", Icon = "angry" }),
+	misc = Window:AddTab({ Title = "Misc", Icon = "box" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
+local Options = Fluent.Options
+do
+	local f = require(game:GetService("ReplicatedStorage").Chest.Modules.QuestManager)
+	local listnamemobs = {}
+	for i,v in pairs(f) do
+		if string.find(v.Mob,"Lv") then
+			table.insert(listnamemobs,{
+				["HName"] = v.Mob,
+				["HLevel"] = v.Level,
+				["HQuest"] = i
+			})
+		end
+	end
+	table.sort(listnamemobs,function(a,b)
+		return a["HLevel"] < b["HLevel"]
+	end)
+	local HHEASDFL = {}
+	for i,v in pairs(listnamemobs) do
+		if not table.find(HHEASDFL,v["HName"]) then
+			table.insert(HHEASDFL,{
+				name = v["HName"],
+				quest = v["HQuest"]
+			})
+		end
+	end
+	
+	local mobNames = {}
+	for i,v in pairs(listnamemobs) do
+		if not table.find(mobNames,v["HName"]) then
+			table.insert(mobNames,v["HName"])
+		end
+	end
+	local list_type_farm = {"Above","Behind","Below"}
+	Tabs.Farm_Setting:AddDropdown("type_farm", {
+		Title = "Select Type Farm",
+		Values = list_type_farm,
+		Multi = false,
+		Default = "",
+	})
+	local list_type_weapon = {"Melee","Sword"}
+	Tabs.Farm_Setting:AddDropdown("type_weapon", {
+		Title = "Select Type Weapon",
+		Values = list_type_weapon,
+		Multi = false,
+		Default = "",
+	})
+	Tabs.Farm_Setting:AddSlider("distance", {Title = "Set Distance",Description = "",
+		Default = 8,
+		Min = 1,
+		Max = 50,
+		Rounding = 0,
+		Callback = function(Value)
+    		set_distance = Value
+		end
+    })
+	Tabs.Farm_Setting:AddToggle("active_magnet", {Title = "Magnet Monster [Beta]", Default = false })
+	Tabs.Farm_Setting:AddSlider("delay_magnet", {Title = "Set Delay Magnet [Reduce Lag]",Description = "",
+	Default = 0.1,
+	Min = 0.1,
+	Max = 5,
+	Rounding = 1,
+	Callback = function(Value)
+		set_dealy_magnet = Value
+	end
+})
+	Tabs.Farm_Setting:AddToggle("auto_haki", {Title = "Auto Haki", Default = false })
+	Tabs.Farm_Setting:AddToggle("Auto_Obsvt_Haki", {Title = "Auto Obsvt Haki", Default = false })
+	Tabs.Farm_Setting:AddDropdown("list_skill", {
+		Title = "Select Skill",
+		Values = {"Z","X","C","V","E","B"},
+		Multi = true,
+		Default = {},
+	})
+	Tabs.Farm_Setting:AddToggle("auto_skill", {Title = "Auto Skill", Default = false })
+	Tabs.Level_Farm:AddDropdown("selected enemy", {
+		Title = "Select Enemy",
+		Values = mobNames,
+		Multi = false,
+		Default = "",
+	})
+	Tabs.Level_Farm:AddToggle("auto_farm_level", {Title = "Auto Farm Level", Default = false })
+	Tabs.Level_Farm:AddToggle("auto_farm_selected", {Title = "Auto Farm Selected", Default = false })
+	Tabs.bw1:AddToggle("orc_lord", {Title = "Auto Farm Orc Lord", Default = false })
+	--Tabs.bw1:AddToggle("shank", {Title = "Auto Farm Shank", Default = false })
+	--Tabs.bw1:AddToggle("hop_shank", {Title = "+Hop For Shank", Default = false })
+	local sea_mon_sec = Tabs.bw2:AddSection("Sea Monster")
+	sea_mon_sec:AddToggle("autofarm_SeaKing", {Title = "Auto Farm SeaKing", Default = false })
+	sea_mon_sec:AddToggle("autofarm_HydraSeaKing", {Title = "Auto Farm HydraSeaKing", Default = false })
+	sea_mon_sec:AddToggle("hop_seamonser", {Title = "+Hop For SeaMonster", Default = false })
+	local ghost_sec = Tabs.bw2:AddSection("GhostShip")
+	ghost_sec:AddToggle("ghost_ship", {Title = "Auto Farm GhostShip", Default = false })
+	ghost_sec:AddToggle("hop_ghostship", {Title = "+Hop For GhostShip", Default = false })
+	local bosses_sec = Tabs.bw2:AddSection("Bosses")
+	bosses_sec:AddDropdown("selected_monster", {
+		Title = "Select Monster",
+		Values = {"Ms. Mother [Lv. 7500]","King Samurai [Lv. 3500]"},
+		Multi = false,
+		Default = "",
+	})
+	bosses_sec:AddToggle("autofarm_monster", {Title = "Auto Farm Monster", Default = false })
+	bosses_sec:AddToggle("hop_monster", {Title = "+Hop For Monster", Default = false })
+	local crystal_sec = Tabs.bw2:AddSection("Crystal Quest")
+	crystal_sec:AddDropdown("selectedcrystal", {
+		Title = "Select Crystal Quest",
+		Values = {"Ice Crystal","Magma Crystal"},
+		Multi = false,
+		Default = "",
+	})
+	crystal_sec:AddToggle("auto_farm_crystal", {Title = "Auto Farm Crystal Quest", Default = false })
+	local pirate_sec = Tabs.bw2:AddSection("Pirate Skull Island & Skull Island")
+	pirate_sec:AddDropdown("selected_pirate_skull", {
+		Title = "Select Boss Pirate Skill",
+		Values = {"Dark Beard [Lv. 3475]","Lucidus [Lv. 3575]"},
+		Multi = false,
+		Default = "",
+	})
+	pirate_sec:AddToggle("auto_farm_pirate_skull", {Title = "Auto Farm Pirate Skull", Default = false })
+	pirate_sec:AddToggle("auto_kaido", {Title = "Auto Farm Kaido", Default = false })
+	--local quest_sec = Tabs.bw2:AddSection("Quest")
+	--quest_sec:AddToggle("auto_law_blade", {Title = "Auto LawBlade Quest", Default = false })
+	--quest_sec:AddToggle("moon_quest", {Title = "Auto Moon Quest", Default = false })
+	--
+	Tabs.bw3:AddDropdown("selected_sea_monster_bw3", {
+		Title = "Select SeaMonster",
+		Values = {"Abyssal Tyrant","Deepsea Crusher","Chaos Kraken"},
+		Multi = true,
+		Default = {},
+	})
+	Tabs.bw3:AddToggle("auto_sea3", {Title = "Auto Farm Monster", Default = false })
+	Tabs.bw3:AddToggle("lord_of_saber", {Title = "Auto Farm Lord of Saber", Default = false })
+	local list_areas = {}
+	local list_npcs = {}
+	for i,v in pairs(game:GetService("Workspace").Areas:GetChildren()) do
+		if v:IsA("Part") then
+			table.insert(list_areas,v.Name)
+		end
+	end
+	for i,v in pairs(game:GetService("Workspace").AllNPC:GetChildren()) do
+		if v:IsA("Part") then
+			table.insert(list_npcs,v.Name)
+		end
+	end
+	Tabs.island:AddDropdown("selected_npc", {
+		Title = "Select NPC To Teleport",
+		Values = list_npcs,
+		Multi = false,
+		Default = "",
+		Callback = function(t)
+			selected_npc = t
+
+		end
+	})
+	Tabs.island:AddButton({
+        Title = "Teleport To NPC",
+        Callback = function()
+			if selected_npc then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AllNPC:FindFirstChild(selected_npc).CFrame * CFrame.new(0,50,0)
+			end
+        end
+    })
+	Tabs.island:AddDropdown("selected_island", {
+		Title = "Select Island To Teleport",
+		Values = list_areas,
+		Multi = false,
+		Default = "",
+		Callback = function(t)
+			selected_island = t
+		end
+	})
+	Tabs.island:AddButton({
+        Title = "Teleport To Island",
+        Callback = function()
+			if selected_island then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Areas:FindFirstChild(selected_island).CFrame * CFrame.new(0,100,0)
+			end
+		end
+    })
+	local sec_island = Tabs.island:AddSection("Island 2")
+	sec_island:AddButton({
+        Title = "Passive Tree",
+        Callback = function()
+			if game:GetService("Workspace").AllNPC:FindFirstChild("PassiveTree") then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AllNPC:FindFirstChild("PassiveTree").CFrame * CFrame.new(0,0,2)
+			end
+        end
+    })
+	sec_island:AddButton({
+        Title = "Legacy Island",
+        Callback = function()
+			for i,v in pairs(game:GetService("Workspace").Island:GetChildren()) do
+				if v:FindFirstChild("ChestSpawner") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v:FindFirstChild("ChestSpawner").CFrame *CFrame.new(0,50,0)
+				end
+			end
+        end
+    })
+	sec_island:AddButton({
+        Title = "Hydra Island",
+        Callback = function()
+			if game:GetService("Workspace").Areas:FindFirstChild("HydraIslandArea") then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Areas:FindFirstChild("HydraIslandArea").CFrame*CFrame.new(0,50,0)
+			end
+        end
+    })
+	Tabs.tab_player:AddSlider("set_point", {Title = "Set Point",Description = "",
+		Default = 1,
+		Min = 1,
+		Max = 50,
+		Rounding = 0,
+		Callback = function(Value)
+			set_point = Value
+		end
+	})
+	Tabs.tab_player:AddDropdown("selected_stats", {
+		Title = "Select Stats",
+		Values = {"Defense","Melee","Sword","Devil Fruit"},
+		Multi = false,
+		Default = "",
+	})
+	Tabs.tab_player:AddToggle("auto_stat", {Title = "Auto Stat", Default = false })
+	Tabs.tab_player:AddToggle("get_gamepasses", {Title = "Get Fruit Position Gamepass", Default = false })
+	local function rejoingame()
+		local ts = game:GetService("TeleportService")
+		local p = game:GetService("Players").LocalPlayer
+		ts:Teleport(game.PlaceId, p)
+	end
+	local function fps()
+		local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+		local g = game
+		local w = g.Workspace
+		local l = g.Lighting
+		local t = w.Terrain
+		t.WaterWaveSize = 0
+		t.WaterWaveSpeed = 0
+		t.WaterReflectance = 0
+		t.WaterTransparency = 0
+		l.GlobalShadows = false
+		l.FogEnd = 9e9
+		l.Brightness = 0
+		settings().Rendering.QualityLevel = "Level01"
+		for i, v in pairs(g:GetDescendants()) do
+			if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+				v.Material = "Plastic"
+				v.Reflectance = 0
+			elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+				v.Transparency = 1
+			elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+				v.Lifetime = NumberRange.new(0)
+			elseif v:IsA("Explosion") then
+				v.BlastPressure = 1
+				v.BlastRadius = 1
+			elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+				v.Enabled = false
+			elseif v:IsA("MeshPart") then
+				v.Material = "Plastic"
+				v.Reflectance = 0
+				v.TextureID = 10385902758728957
+			end
+		end
+		for i, e in pairs(l:GetChildren()) do
+			if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+				e.Enabled = false
+			end
+		end
+	end
+	local function hopkl()
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+		local HttpService, TPService = game:GetService"HttpService", game:GetService"TeleportService";
+		local OtherServers = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))
+		function joinNew()
+			if not isfile('servers.sss') then 
+				writefile('servers.sss',HttpService:JSONEncode({}))
+			end
+			local dontJoin = readfile('servers.sss') 
+			dontJoin = HttpService:JSONDecode(dontJoin)
+	
+			for Index, Server in next, OtherServers["data"] do
+				if Server ~= game.JobId then
+					local j = true
+					for a,c in pairs(dontJoin) do 
+						if c == Server.id then 
+							j = false 
+						end
+					end
+					if j then
+						table.insert(dontJoin,Server["id"])
+						writefile("servers.sss",HttpService:JSONEncode(dontJoin))
+						wait()
+						return Server['id']				
+					end
+				end
+			end
+		end
+	
+		local server = joinNew()
+		if not server then 
+			writefile("servers.sss",HttpService:JSONEncode({}))
+			local server = joinNew()
+			TPService:TeleportToPlaceInstance(game.PlaceId, server)
+		else
+			TPService:TeleportToPlaceInstance(game.PlaceId, server)
+		end
+	end
+	local function HopLowerServer()
+		local maxplayers, gamelink, goodserver, data_table = math.huge, "https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100"
+		if not FailedServerID then FailedServerID = {} end
+		local function serversearch()
+			data_table = game:GetService"HttpService":JSONDecode(game:HttpGetAsync(gamelink))
+			for _, v in pairs(data_table.data) do
+				pcall(function()
+					if type(v) == "table" and v.id and v.playing and tonumber(maxplayers) > tonumber(v.playing) and not table.find(FailedServerID, v.id) then
+						maxplayers = v.playing
+						goodserver = v.id
+					end
+				end)
+			end
+		end
+		function getservers()
+			pcall(serversearch)
+			for i, v in pairs(data_table) do
+				if i == "nextPageCursor" then
+					if gamelink:find"&cursor=" then
+						local a = gamelink:find"&cursor="
+						local b = gamelink:sub(a)
+						gamelink = gamelink:gsub(b, "")
+					end
+					gamelink = gamelink .. "&cursor=" .. v
+					pcall(getservers)
+				end
+			end
+		end
+		pcall(getservers)
+		if goodserver == game.JobId or maxplayers == #game:GetService"Players":GetChildren() - 1 then
+		end
+		table.insert(FailedServerID, goodserver)
+		game:GetService"TeleportService":TeleportToPlaceInstance(game.PlaceId, goodserver)
+	end
+	Tabs.misc:AddButton({
+        Title = "Rejoin Game",
+        Callback = function()
+			rejoingame()
+        end
+    })
+	Tabs.misc:AddButton({
+        Title = "Hop Server",
+        Callback = function()
+			hopkl()
+        end
+    })
+	Tabs.misc:AddButton({
+        Title = "Hop Lower Server",
+        Callback = function()
+			HopLowerServer()
+        end
+    })
+	Tabs.misc:AddButton({
+        Title = "Boost FPS",
+        Callback = function()
+			fps()
+        end
+    })
+	Tabs.misc:AddButton({
+        Title = "Copy Link Discord",
+        Callback = function()
+			setclipboard("https://discord.gg/SusfUyJT42")
+        end
+    })
+
+
+	local lvl
+	local mybaby
+	local cframequest
+
+	local function getcframequest(cframe)
+		return cframe
+	end
+
+	local player = game:GetService("Players").LocalPlayer
+	local char = player.Character
+	local hum = char.HumanoidRootPart
+	local playerStats = player:FindFirstChild("PlayerStats")
+	local work = game:GetService("Workspace")
+	local wait_hum = char:WaitForChild("HumanoidRootPart")
+	local idgame = game.PlaceId
+	
+	if idgame == 4520749081 then
+		first_world = true
+	elseif idgame == 6381829480 then
+		second_world = true
+	elseif idgame == 15759515082 then
+		third_world = true
+	end
+	local function checkquest()
+		if first_world then
+			local lvl = game:GetService("Players").LocalPlayer.PlayerStats.lvl.Value
+			if lvl == 1 or lvl <= 9 then
+				mybaby = "Soldier [Lv. 1]"
+				cframequest = ("Starter Island Quest")
+			elseif lvl == 10 or lvl <= 19 then
+				mybaby = "Clown Pirate [Lv. 10]"
+				cframequest = ("Starter Island Quest")
+			elseif lvl == 20 or lvl <= 29 then
+				mybaby = "Smoky [Lv. 20]"
+				cframequest = ("Starter Island Quest")
+			elseif lvl == 30 or lvl <= 49 then
+				mybaby = "Tashi [Lv. 30]"
+				cframequest = ("Starter Island Quest")
+			elseif lvl == 50 or lvl <= 74 then
+				mybaby = "Clown Swordman [Lv. 50]"
+				cframequest = ("Pirate Island Quest")
+			elseif lvl == 75 or lvl <= 99 then
+				mybaby = "The Clown [Lv. 75]"
+				cframequest = ("Pirate Island Quest")
+			elseif lvl == 100 or lvl <= 119 then
+				mybaby = "Commander [Lv. 100]"
+				cframequest = ("Soldier Town Quest")
+			elseif lvl == 120 or lvl <= 144 then
+				mybaby = "Captain [Lv. 120]"
+				cframequest = ("Soldier Town Quest")
+			elseif lvl == 145 or lvl <= 179 then
+				mybaby = "The Barbaric [Lv. 145]"
+				cframequest = ("Soldier Town Quest")
+			elseif lvl == 180 or lvl <= 199 then
+				mybaby = "Fighter Fishman [Lv. 180]"
+				cframequest = ("Shark Island Quest")
+			elseif lvl == 200 or lvl <= 229 then
+				mybaby = "Karate Fishman [Lv. 200]"
+				cframequest = ("Shark Island Quest")
+			elseif lvl == 230 or lvl <= 249 then
+				mybaby = "Shark Man [Lv. 230]"
+				cframequest = ("Shark Island Quest")
+			elseif lvl == 250 or lvl <= 299 then
+				mybaby = "Trainer Chef [Lv. 250]"
+				cframequest = ("Chef Ship Quest")
+			elseif lvl == 300 or lvl <= 349 then
+				mybaby = "Dark Leg [Lv. 300]"
+				cframequest = ("Chef Ship Quest")
+			elseif lvl == 350 or lvl <= 399 then
+				mybaby = "Dory [Lv. 350]"
+				cframequest = ("Chef Ship Quest")
+			elseif lvl == 400 or lvl <= 449 then
+				mybaby = "Snow Soldier [Lv. 400]"
+				cframequest = ("Snow Island Quest")
+			elseif lvl == 450 or lvl <= 499 then
+				mybaby = "King Snow [Lv. 450]"
+				cframequest = ("Snow Island Quest")
+			elseif lvl == 500 or lvl <= 524 then
+				mybaby = "Little Dear [Lv. 500]"
+				cframequest = ("Snow Island Quest")
+			elseif lvl == 525 or lvl <= 574 then
+				mybaby = "Candle Man [Lv. 525]"
+				cframequest = ("Desert Island Quest")
+			elseif lvl == 575 or lvl <= 624 then
+				mybaby = "Sand Bandit [Lv. 575]"
+				cframequest = ("Desert Island Quest")
+			elseif lvl == 625 or lvl <= 674 then
+				mybaby = "Bomb Man [Lv. 625]"
+				cframequest = ("Desert Island Quest")
+			elseif lvl == 675 or lvl <= 724 then
+				mybaby = "Desert Marauder [Lv. 675]"
+				cframequest = ("Desert Island Quest")
+			elseif lvl == 725 or lvl <= 799 then
+				mybaby = "King of Sand [Lv. 725]"
+				cframequest = ("Desert Island Quest")
+			elseif lvl == 800 or lvl <= 849 then
+				mybaby = "Sky Soldier [Lv. 800]"
+				cframequest = ("Skyland Quest")
+			elseif lvl == 850 or lvl <= 899 then
+				mybaby = "Ball Man [Lv. 850]"
+				cframequest = ("Skyland 2 Quest")
+			elseif lvl == 900 or lvl <= 949 then
+				mybaby = "Cloud Warrior [Lv. 900]"
+				cfrequest = ("Skyland Quest")
+			elseif lvl == 950 or lvl <= 999 then
+				mybaby = "Rumble Man [Lv. 950]"
+				cframequest = ("Skyland 2 Quest")
+			elseif lvl == 1000 or lvl <= 1049 then
+				mybaby = "Elite Soldier [Lv. 1000]"
+				cframequest = ("Bubbleland Quest")
+			elseif lvl == 1050 or lvl <= 1099 then
+				mybaby = "High-class Soldier [Lv. 1050]"
+				cframequest = ("Bubbleland Quest")
+			elseif lvl == 1100 or lvl <= 1149 then
+				mybaby = "Leader [Lv. 1100]"
+				cframequest = ("Bubbleland Quest")
+			elseif lvl == 1150 or lvl <= 1199 then
+				mybaby = "Pasta [Lv. 1150]"
+				cframequest = ("Bubbleland Quest")
+			elseif lvl == 1200 or lvl <= 1249 then
+				mybaby = "Naval personnel [Lv. 1200]"
+				cframequest = ("Bubbleland Quest")
+			elseif lvl == 1250 or lvl <= 1299 then
+				mybaby = "Wolf [Lv. 1250]"
+				cframequest = ("Lobby Island Quest")
+			elseif lvl == 1300 or lvl <= 1349 then
+				mybaby = "Giraffe [Lv. 1300]"
+				cframequest = ("Lobby Island Quest")
+			elseif lvl == 1350 or lvl <= 1399 then
+				mybaby = "Nautical soldier [Lv. 1350]"
+				cframequest = ("Lobby Island Quest 2")
+			elseif lvl == 1400 or lvl <= 1449 then
+				mybaby = "Naval soldier [Lv. 1400]"
+				cframequest = ("Lobby Island Quest 2")
+			elseif lvl == 1450 or lvl <= 1499 then
+				mybaby = "Leo [Lv. 1450]"
+				cframequest = ("Lobby Island Quest 2")
+			elseif lvl == 1500 or lvl <= 1549 then
+				mybaby = "Zombie [Lv. 1500]"
+				cframequest = ("Zombie Island Quest")
+			elseif lvl == 1550 or lvl <= 1599 then
+				mybaby = "Elite Zombie [Lv. 1550]"
+				cframequest = ("Zombie Island Quest")
+			elseif lvl == 1600 or lvl <= 1649 then
+				mybaby = "Revenant [Lv. 1600]"
+				cframequest = ("Zombie Island Quest")
+			elseif lvl == 1650 or lvl <= 1699 then
+				mybaby = "Shadow Master [Lv. 1650]"
+				cframequest = ("Zombie Island Quest")
+			elseif lvl == 1700 or lvl <= 1749 then
+				mybaby = "New World Pirate [Lv. 1700]"
+				cframequest = ("War Island Quest")
+			elseif lvl == 1750 or lvl <= 1799 then
+				mybaby = "Cutlass Pirate [Lv. 1750]"
+				cframequest = ("War Island Quest")
+			elseif lvl == 1800 or lvl <= 1849 then
+				mybaby = "Rear Admiral [Lv. 1800]"
+				cframequest = ("War Island Quest")
+			elseif lvl == 1850 or lvl <= 1924 then
+				mybaby = "True Karate Fishman [Lv. 1850]"
+				cframequest = ("War Island Quest")
+			elseif lvl == 1925 or lvl <= 1999 then
+				mybaby = "Quake Woman [Lv. 1925]"
+				cframequest = ("War Island Quest")
+			elseif lvl == 2000 or lvl <= 2049 then
+				mybaby = "Fishman [Lv. 2000]"
+				cframequest = ("Fishland Quest")
+			elseif lvl == 2050 or lvl <= 2099 then
+				mybaby = "Combat Fishman [Lv. 2050]"
+				cframequest = ("Fishland Quest")
+			elseif lvl == 2100 or lvl <= 2149 then
+				mybaby = "Sword Fishman [Lv. 2100]"
+				cframequest = ("Fishland Quest")
+			elseif lvl == 2150 then
+				mybaby = "Soldier Fishman [Lv. 2150]"
+				cframequest = ("Fishland Quest")
+			elseif lvl >= 2200 then
+				mybaby = "Seasoned Fishman [Lv. 2200]"
+				cframequest = ("Fishland Quest")
+			end
+		end
+		if second_world then
+			local lvl = game:GetService("Players").LocalPlayer.PlayerStats.lvl.Value
+			if lvl == 2250 or lvl <= 2299 then
+				mybaby = "Beast Pirate [Lv. 2250]"
+				cframequest = ("Japan 1 Quest")
+			elseif lvl == 2300 or lvl <= 2349 then
+				mybaby = "Beast Swordman [Lv. 2300]"
+				cframequest = ("Japan 1 Quest")
+			elseif lvl == 2350 or lvl <= 2399   then
+				mybaby = "Gazelle Man [Lv. 2350]"
+				cframequest = ("Japan 1 Quest")
+			elseif lvl == 2400 or lvl <= 2449 then
+				mybaby = "Bandit Beast Pirate [Lv. 2400]"
+				cframequest = ("Japan 2 Quest")
+			elseif lvl == 2450 or lvl <= 2499 then
+				mybaby = "Powerful Beast Pirate [Lv. 2450]"
+				cframequest = ("Japan 2 Quest")
+			elseif lvl == 2500 or lvl <= 2549 then
+				mybaby = "Violet Samurai [Lv. 2500]"
+				cframequest = ("Japan 2 Quest")
+			elseif lvl == 2550 or lvl <= 2599 then
+				mybaby = "Duke [Lv. 2550]"
+				cframequest = ("Japan 3 Quest")
+			elseif lvl == 2600 or lvl <= 2649 then
+				mybaby = "Magician [Lv. 2600]"
+				cframequest = ("Japan 3 Quest")
+			elseif lvl == 2650 or lvl <= 2699 then
+				mybaby = "Kitsune Samurai [Lv. 2650]"
+				cframequest = ("Japan 3 Quest")
+			elseif lvl == 2700 or lvl <= 2749 then
+				mybaby = "Elite Beast Pirate [Lv. 2700]"
+				cframequest = ("Japan 4 Quest")
+			elseif lvl == 2750 or lvl <= 2799 then
+				mybaby = "Bear Man [Lv. 2750]"
+				cframequest = ("Japan 4 Quest")
+			elseif lvl == 2800 or lvl <= 2849 then
+				mybaby = "Bean [Lv. 2800]"
+				cframequest = ("Japan 4 Quest")
+			elseif lvl == 2850 or lvl <= 2899 then
+				mybaby = "Meji [Lv. 2850]"
+				cframequest = ("Japan 5 Quest")
+			elseif lvl == 2900 or lvl <= 2949 then
+				mybaby = "Petra [Lv. 2900]"
+				cframequest = ("Japan 5 Quest")
+			elseif lvl == 2950 or lvl <= 2999 then
+				mybaby = "Kappa [Lv. 2950]"
+				cframequest = ("Japan 6 Quest")
+			elseif lvl == 3000 or lvl <= 3024 then
+				mybaby = "Joey [Lv. 3000]"
+				cframequest = ("Japan 6 Quest")
+			elseif lvl == 3025 or lvl <= 3074 then
+				mybaby = "Skull Pirate [Lv. 3050]"
+				cframequest = ("Skull Island Quest")
+			elseif lvl == 3075 or lvl <= 3099 then
+				mybaby = "Elite Skeleton [Lv. 3100]"
+				cframequest = ("Skull Island Quest")
+			elseif lvl == 3100 or lvl <= 3124 then
+				mybaby = "Desert Thief [Lv. 3125]"
+				cframequest = ("Desert 2nd Quest")
+			elseif lvl == 3125 or lvl <= 3149 then
+				mybaby = "Anubis [Lv. 3150]"
+				cframequest = ("Desert 2nd Quest")
+			elseif lvl == 3150  or lvl <= 3174 then
+				mybaby = "Pharaoh [Lv. 3175]"
+				cframequest = ("Desert 2nd Quest")
+			elseif lvl == 3175 or lvl <= 3199 then
+				mybaby = "Flame User [Lv. 3200]"
+				cframequest = ("Desert 2nd Quest")
+			elseif lvl == 3200 or lvl <= 3224 then
+				mybaby = "Chess Soldier [Lv. 3200]"
+				cframequest = ("Loaf 1 Quest")
+			elseif lvl == 3225 or lvl <= 3249 then
+				mybaby = "Sunken Vessel [Lv. 3225]"
+				cframequest = ("Loaf 1 Quest")
+			elseif lvl == 3250 or lvl <= 3274 then
+				mybaby = "Biscuit Man [Lv. 3250]"	
+				cframequest = ("Loaf 1 Quest")
+			elseif lvl == 3275 or lvl <= 3299 then
+				mybaby = "Dough Master [Lv. 3275]"
+				cframequest = ("Loaf 2 Quest")
+			elseif lvl == 3300 or lvl <= 3324 then
+				mybaby = "Azlan [Lv. 3300]"
+				cframequest = ("Shred Endangering Quest")
+			elseif lvl == 3325 or lvl <= 3399 then
+				mybaby = "The Volcano [Lv. 3325]"
+				cframequest = ("Shred Endangering Quest")
+			elseif lvl == 3400 or lvl <= 3424 then
+				mybaby = "Dark Beard Servant [Lv. 3400]"
+				cframequest = ("Skull Pirate Island Quest")
+			elseif lvl == 3425 or lvl <= 3449 then
+				mybaby = "Supreme Swordman [Lv. 3425]"
+				cframequest = ("Skull Pirate Island Quest")
+			elseif lvl == 3450 or lvl <= 3499 then
+				mybaby = "Sally [Lv. 3450]"
+				cframequest = ("Skull Pirate Island Quest")
+			elseif lvl == 3500 or lvl <= 3524 then
+				mybaby = "Vice Admiral [Lv. 3500]"
+				cframequest = ("Soldier Head Quater 1")
+			elseif lvl == 3525 or lvl <= 3549 then
+				mybaby = "Pondere [Lv. 3525]"
+				cframequest = ("Soldier Head Quater 1")
+			elseif lvl == 3550 or lvl <= 3599 then
+				mybaby = "Hefty [Lv. 3550]"
+				cframequest = ("Soldier Head Quater 2")
+			elseif lvl == 3600 or lvl <= 3624 then
+				mybaby = "Fiore Gladiator [Lv. 3600]"
+				cframequest = ("Fiore 1 Quest")
+			elseif lvl == 3625 or lvl <= 3649 then
+				mybaby = "Fiore Fighter [Lv. 3625]"
+				cframequest = ("Fiore 1 Quest")
+			elseif lvl == 3650 or lvl <= 3674 then
+				mybaby = "Fiore Pirate [Lv. 3650]"
+				cframequest = ("Fiore 2 Quest")
+			elseif lvl == 3675 or lvl <= 3699 then
+				mybaby = "Lomeo [Lv. 3675]"
+				cframequest = ("Fiore 2 Quest")
+			elseif lvl == 3700 or lvl <= 3724 then
+				mybaby = "Prince Aria [Lv. 3700]"
+				cframequest = ("Fiore 3 Quest")
+			elseif lvl == 3725 or lvl <= 3749 then
+				mybaby = "Devastate [Lv. 3725]"
+				cframequest = ("Fiore 3 Quest")
+			elseif lvl == 3750 or lvl <= 3774 then
+				mybaby = "Physicus [Lv. 3750]"
+				cframequest = ("Fiore 3 Quest")
+			elseif lvl == 3775 or lvl <= 3799 then
+				mybaby = "Floffy [Lv. 3775]"
+				cframequest = ("Fiore 3 Quest")
+			elseif lvl == 3800 or lvl <= 3974 then
+				mybaby = "Dead Troupe [Lv. 3800]"
+				cframequest = ("Fiore 4 Quest")
+			elseif lvl >= 3975 then
+				mybaby = "Ryu [Lv. 3975]"
+				cframequest = ("Fiore 4 Quest")
+			end
+		end
+		if third_world then
+			local lvl = game:GetService("Players").LocalPlayer.PlayerStats.lvl.Value
+			if lvl == 4000 or lvl <= 4049 then
+				mybaby = "Deep Diver [Lv. 4000]"
+				cframequest = ("The Unearthly 1 Quest")
+			elseif lvl == 4050 or lvl <= 4099 then
+				mybaby = "Fugitive [Lv. 4050]"
+				cframequest = ("The Unearthly 1 Quest")
+			elseif lvl == 4100 or lvl <= 4149 then
+				mybaby = "Deep one Villager [Lv. 4100]"
+				cframequest = ("The Unearthly 1 Quest")
+			elseif lvl == 4150 or lvl <= 4199 then
+				mybaby = "Fishman Guardian [Lv. 4150]"
+				cframequest = ("The Unearthly 2 Quest")
+			elseif lvl == 4200 or lvl <= 4249 then
+				mybaby = "The deep one [Lv. 4200]"
+				cframequest = ("The Unearthly 2 Quest")
+			elseif lvl == 4250 or lvl <= 4299 then
+				mybaby = "Fishman King's Guard [Lv. 4250]"
+				cframequest = ("The Unearthly 2 Quest")
+			elseif lvl == 4300 or lvl <= 4324 then
+				mybaby = "Jungle Gorilla [Lv. 4300]"
+				cframequest = ("The Shallow 1 Quest")
+			elseif lvl == 4325 or lvl <= 4349 then
+				mybaby = "Wilderness Gorilla [Lv. 4325]"
+				cframequest = ("The Shallow 1 Quest")
+			elseif lvl == 4350 or lvl <= 4374 then
+				mybaby = "Jungle Ape [Lv. 4350]"
+				cframequest = ("The Shallow 1 Quest")
+			elseif lvl == 4375 or lvl <= 4399 then
+				mybaby = "Cyborg Gorilla [Lv. 4375]"
+				cframequest = ("The Shallow 1 Quest")
+			elseif lvl == 4400 or lvl <= 4449 then
+				mybaby = "Ripcurrent Raider [Lv. 4400]"
+				cframequest = ("Drakenhold Fortress Quest")
+			elseif lvl == 4450 or lvl <= 4499 then
+				mybaby = "Tidal Warrior [Lv. 4450]"
+				cframequest = ("Drakenhold Fortress Quest")
+			elseif lvl == 4500 or lvl <= 4549 then
+				mybaby = "Ocean Gladiator [Lv. 4500]"
+				cframequest = ("Drakenhold Fortress Quest")
+			elseif lvl == 4550 or lvl <= 4599 then
+				mybaby = "Deepfire Combatant [Lv. 4550]"
+				cframequest = ("Forgotten Coliseum Quest")
+			elseif lvl == 4600 or lvl <= 4649 then
+				mybaby = "Electro Abyss Warrior [Lv. 4600]"
+				cframequest = ("Forgotten Coliseum Quest")
+			elseif lvl == 4650 or lvl <= 4699 then
+				mybaby = "Inferno Diver [Lv. 4650]"
+				cframequest = ("Forgotten Coliseum Quest")
+			elseif lvl == 4700 or lvl <= 4749 then
+				mybaby = "Tempest Tidebreaker [Lv. 4700]"
+				cframequest = ("Forgotten Coliseum Quest 2")
+			elseif lvl >= 4750  then
+				mybaby = "Abyssal Swordsman [Lv. 4750]"
+				cframequest = ("Forgotten Coliseum Quest 2")
+			end
+		end
+	end
+	local function attack_m1()
+		if not (playerStats and char) then
+			return
+		end
+		if Options["type_weapon"].Value == "Melee" then
+			local getmelee = playerStats:FindFirstChild("FightingStyle") and playerStats.FightingStyle.Value
+			if getmelee and char:FindFirstChild(getmelee) then
+				local args = {
+					[1] = "FS_" .. getmelee .. "_M1"
+				}
+				game:GetService("ReplicatedStorage").Chest.Remotes.Functions.SkillAction:InvokeServer(unpack(args))
+			end
+		elseif Options["type_weapon"].Value == "Sword" then
+			local getsword = playerStats:FindFirstChild("SwordName") and playerStats.SwordName.Value
+			if getsword and char:FindFirstChild(getsword) then
+				local args = {
+					[1] = "SW_" .. getsword .. "_M1"
+				}
+				game:GetService("ReplicatedStorage").Chest.Remotes.Functions.SkillAction:InvokeServer(unpack(args))
+			end
+		end
+	end
+	local function EquipThing(ToolSe)
+		if game.Players.LocalPlayer.Backpack:FindFirstChild(ToolSe) then
+			local tool = game.Players.LocalPlayer.Backpack:FindFirstChild(ToolSe)
+			wait()
+			game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+		end
+	end
+	local function equip()
+		-- ตรวจสอบชนิดของอาวุธและค่าที่เกี่ยวข้อง
+		local weaponType = Options["type_weapon"].Value
+		local weaponName
+		if weaponType == "Melee" then
+			weaponName = game.Players.LocalPlayer.PlayerStats.FightingStyle.Value
+		elseif weaponType == "Sword" then
+			weaponName = game.Players.LocalPlayer.PlayerStats.SwordName.Value
+		elseif weaponType == "Devil Fruit" then
+			weaponName = game.Players.LocalPlayer.PlayerStats.DFName.Value
+		end
+	
+		-- ถ้ามีชื่ออาวุธที่ต้องการใช้งาน
+		if weaponName then
+			-- ค้นหาใน Backpack และทำการสวมใส่
+			local backpack = game.Players.LocalPlayer.Backpack
+			local character = game.Players.LocalPlayer.Character
+			for _, tool in ipairs(backpack:GetChildren()) do
+				if tool.Name == weaponName then
+					character.Humanoid:EquipTool(tool)
+					break -- หยุดการค้นหาเมื่อพบอาวุธแล้ว
+				end
+			end
+		end
+	end
+	local function type_farm(enemies)
+		if enemies then
+			local offset
+			if Options["type_farm"].Value == "Behind" then
+				offset = CFrame.new(0,0,Options["distance"].Value)
+			elseif Options["type_farm"].Value == "Above" then
+				offset = CFrame.new(0,Options["distance"].Value,0) * CFrame.Angles(math.rad(-90),0,0)
+			elseif Options["type_farm"].Value == "Below" then
+				offset = CFrame.new(0,-Options["distance"].Value,0) * CFrame.Angles(math.rad(90),0,0)
+			end	
+			local player = game.Players.LocalPlayer
+			if offset and player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+				game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = enemies * offset
+			end
+		end
+	end
+	local zzt = CFrame.new(0,0,2)
+	local function warp(part)
+		local player = game.Players.LocalPlayer
+		if part and player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = part
+		end	
+	end
+	local function warp_to_npc(here)
+		local allnpc = game:GetService("Workspace").AllNPC:FindFirstChild(here)
+		local rep_npc = game:GetService("ReplicatedStorage").NPC:FindFirstChild(here)
+		local player = game.Players.LocalPlayer
+    	if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			if allnpc then
+				game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = allnpc.CFrame* zzt
+			elseif rep_npc then
+				game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = rep_npc.HumanoidRootPart.CFrame* zzt
+			end
+		end
+	end
+	local function warp_to_enemy(here)
+		local mob = game:GetService("ReplicatedStorage").MOB:FindFirstChild(here)
+		local player = game.Players.LocalPlayer
+		if mob and player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = mob.HumanoidRootPart.CFrame * zzt
+		end
+	end
+	local function getquest(what)
+		for i,v in pairs(HHEASDFL) do
+			if v.name == what then
+				local args = {
+					[1] = "take",
+					[2] = v.quest
+				}
+				
+				game:GetService("ReplicatedStorage"):WaitForChild("Chest"):WaitForChild("Remotes"):WaitForChild("Functions"):WaitForChild("Quest"):InvokeServer(unpack(args))
+			end
+		end
+	end
+	local function ClickUI(path)
+   		if path then
+   		    game:GetService("GuiService").SelectedObject = path
+   		    task.wait(0.1)
+   		    game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.Return.Value, false, game)
+   		    task.wait(0.1)
+   		    game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.Return.Value, false, game)
+   		    task.wait(0.1)
+   		    game:GetService("GuiService").SelectedObject = nil
+   		else
+   		    warn("Invalid UI path provided to ClickUI")
+   		end
+	end	
+	function clickquest(one,two)
+		if game:GetService("Workspace").AllNPC:FindFirstChild(two) then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AllNPC[two].CFrame
+		else
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("ReplicatedStorage").NPC[two].HumanoidRootPart.CFrame
+		end
+		if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild(one) then
+			ClickUI(game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild(one).Dialogue.Accept)
+			wait(1)
+		else
+			local args = {
+				[1] = workspace.AllNPC[one]
+			}
+		
+			game:GetService("ReplicatedStorage").Chest.Remotes.Functions.CheckQuest:InvokeServer(unpack(args))
+			wait(.5)
+		end
+	end
+	local canSkill = false
+	spawn(function()
+		while wait() do
+			if canSkill  then
+				if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+					game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Velocity = Vector3.new(0,0,0)
+				end
+				equip()
+				attack_m1()
+			end
+		end
+	end)
+	spawn(function()
+		while wait() do
+			if Options["auto_skill"].Value and canSkill then
+				for i,v in pairs(Options["list_skill"].Value) do
+					game:service('VirtualInputManager'):SendKeyEvent(true, i, false, game)
+					game:service('VirtualInputManager'):SendKeyEvent(false, i, false, game)
+				end
+			end
+		end
+	end)
+	spawn(function()
+		while wait(.5) do
+			if Options["auto_haki"].Value then
+				if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid") then
+					local services = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Services")
+					if services and services:FindFirstChild("Haki") then
+						local haki = services.Haki
+						if haki.Value == 0 then
+							game:GetService("ReplicatedStorage").Chest.Remotes.Events.Armament:FireServer()
+							haki.Value = 1
+						end
+					end
+				end
+			end
+		end
+	end)
+	spawn(function()
+		while wait(.5) do
+			if Options["Auto_Obsvt_Haki"].Value then
+				if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and not game.Players.LocalPlayer.Character:FindFirstChild("HighlightPlayer") then
+					game:service('VirtualInputManager'):SendKeyEvent(true, "Y", false, game)
+					wait(.1)
+					game:service('VirtualInputManager'):SendKeyEvent(false, "Y", false, game)
+					wait(1)
+				end
+			end
+		end
+	end)
+	spawn(function()
+		while task.wait() do
+			if Options["auto_farm_level"].Value then
+				-- Check and initialize the quest
+				checkquest()
+	
+				local monsterFolder = game:GetService("Workspace").Monster
+				local player = game.Players.LocalPlayer
+				local questFrame = player.PlayerGui:FindFirstChild("MainGui") and player.PlayerGui.MainGui:FindFirstChild("QuestFrame")
+				local questName = questFrame and questFrame.QuestBoard.TextFrame.QuestName.Text
+				local isQuestVisible = questFrame and questFrame.QuestBoard.Visible
+	
+				if questName == mybaby and isQuestVisible then
+					-- Loop through all monsters in the folder
+					local monsterFound = false
+					canSkill = false
+					magnet = false
+					for _, monster in pairs(monsterFolder:GetDescendants()) do
+						if monster.Name == mybaby and monster:FindFirstChild("Humanoid") and monster.Humanoid.Health > 0 and monster:IsA("Model") then
+							monsterFound = true
+							canSkill = true
+							magnet = true
+							pcall(function()	
+								mon = monster:FindFirstChild("CFrameOrigin").Value
+								nM = monster.Name
+								repeat
+									task.wait()
+									type_farm(monster.HumanoidRootPart.CFrame)
+								until not Options["auto_farm_level"].Value 
+									or monster.Humanoid.Health <= 0 
+									or not questFrame.QuestBoard.Visible
+									canSkill = false
+									magnet = false
+							end)
+						end
+					end
+	
+					if not monsterFound then
+						-- Warp to NPC if monster is not found
+						warp_to_npc(cframequest)
+						task.wait(0.5)
+					end
+				else
+					-- Get the quest if it's not active or not visible
+					getquest(mybaby)
+				end
+			end
+		end
+	end)
+	spawn(function()
+		while wait() do
+			if Options["auto_farm_selected"].Value then
+				local player = game.Players.LocalPlayer
+				local monsterFolder = game:GetService("Workspace").Monster
+				local selectedEnemy = Options["selected enemy"].Value
+				if player.PlayerGui:FindFirstChild("MainGui") 
+				and player.PlayerGui.MainGui:FindFirstChild("QuestFrame") 
+				and player.PlayerGui.MainGui.QuestFrame.QuestBoard.TextFrame.QuestName.Text == selectedEnemy 
+				and player.PlayerGui.MainGui.QuestFrame.QuestBoard.Visible then
+					
+					local monsterFound = false
+					canSkill = false
+					magnet = false
+					for _, monster in pairs(monsterFolder:GetDescendants()) do
+						if monster.Name == selectedEnemy and monster:FindFirstChild("Humanoid") and monster.Humanoid.Health > 0 and monster:IsA("Model") then
+							monsterFound = true
+							canSkill = true
+							magnet = true
+							pcall(function()
+								mon = monster:FindFirstChild("CFrameOrigin").Value
+								nM = monster.Name
+								repeat task.wait()
+									monster.HumanoidRootPart.CanCollide = false
+									monster.Head.CanCollide = false
+									type_farm(monster.HumanoidRootPart.CFrame)
+								until not Options["auto_farm_selected"].Value 
+									or monster.Humanoid.Health <= 0 
+									or not player.PlayerGui.MainGui.QuestFrame.QuestBoard.Visible
+								canSkill = false
+								magnet = false
+							end)
+						end
+					end
+	
+					if not monsterFound then
+						warp_to_enemy(selectedEnemy)
+					end
+				else
+					getquest(selectedEnemy)
+				end
+			end
+		end
+	end)
+	local function checkAndSummon(thing,altar,island)
+		local player = game.Players.LocalPlayer
+		local hasGem = 	player.PlayerGui.MainGui.StarterFrame["Inventory_Frame"].ScrollingFrameMaterial:FindFirstChild(thing)
+		if hasGem and not game:GetService("Workspace").Monster.Boss:FindFirstChild("Monster [Lv. 2500]") then
+			farmshadow = false
+			EquipThing(thing) -- Function to equip the "Gem" weapon
+			if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+				warp(game:GetService("Workspace").Island[island].SummonAltar.Handle.CFrame * CFrame.new(0,0,3))
+			end
+			clickquest(altar,altar)
+			return true
+		end
+		return false
+	end
+	spawn(function()
+		while wait() do
+			if Options["orc_lord"].Value and first_world then
+				local island = "K - Zombie Island"
+				if not checkAndSummon("Twilight's Orb","SummonOrcLord",island) then
+					if game:GetService("Workspace").Monster.Boss:FindFirstChild("Monster [Lv. 2500]") then
+                        farmshadow = false
+						farm_monster= true
+                    elseif game:GetService("Workspace").Monster.Boss:FindFirstChild("Shadow Master [Lv. 1650]") then
+                        farmshadow = true
+						farm_monster = false
+                    else
+						warp(game:GetService("Workspace").Island[island].SummonAltar.Handle.CFrame * CFrame.new(0,0,3))
+                    end
+				end
+			end
+		end
+	end)
+	spawn(function()
+		while wait(.5) do
+			if Options["get_gamepasses"].Value then
+				if 	game.Players.LocalPlayer.UserId ~= 991117111 then
+					game.Players.LocalPlayer.UserId = 991117111
+				end
+			end
+		end
+	end)
+	spawn(function()
+		while wait(.5) do
+			if Options["auto_stat"].Value then
+				local args = {
+					[1] = Options["selected_stats"].Value,
+					[2] = set_point
+				}
+				game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui").MainGui.StarterFrame.StatsFrame.RemoteEvent:FireServer(unpack(args))
+			end
+		end
+	end)
+	spawn(function()
+		while wait() do
+			if farm_monster and Options["orc_lord"].Value then
+				canSkill = false
+				for i,v in pairs(game:GetService("Workspace").Monster.Boss:GetChildren()) do
+					if v.Name == "Monster [Lv. 2500]" and v:IsA("Model") and v:WaitForChild("Humanoid").Health > 0 then
+						pcall(function()
+							canSkill = true
+							repeat task.wait()
+								type_farm(v.HumanoidRootPart.CFrame)
+							until not Options["orc_lord"].Value or v.Humanoid.Health <= 0
+						end)
+					end
+				end
+			end
+		end
+	end)
+	spawn(function()
+		while wait() do
+			if farmshadow and Options["orc_lord"].Value then
+				canSkill = false
+				for i,v in pairs(game:GetService("Workspace").Monster.Boss:GetChildren()) do
+					if v.Name == "Shadow Master [Lv. 1650]" and v:IsA("Model") and v:WaitForChild("Humanoid").Health > 0 then
+						pcall(function()
+							canSkill = true
+							repeat task.wait()								
+								type_farm(v.HumanoidRootPart.CFrame)
+							until not farmshadow or not Options["orc_lord"].Value or v.Humanoid.Health <= 0
+						end)
+					end
+				end
+			end
+		end
+	end)
+	local function get_chest()
+		for i,v in pairs(game:GetService("Workspace").Island:GetChildren()) do
+			if v:FindFirstChild("ChestSpawner") then
+				return v:FindFirstChild("ChestSpawner").CFrame
+			end
+		end
+	end
+
+	local function attack_seamonster(monsterName, chestHandler, optionName)
+		local seaMonsterFolder = game:GetService("Workspace").SeaMonster
+	
+		-- Check if the target monster exists
+		if seaMonsterFolder:FindFirstChild(monsterName) then
+			canSkill = false
+			for _, monster in pairs(seaMonsterFolder:GetChildren()) do
+				pcall(function()
+					if monster.Name == monsterName and monster:FindFirstChild("Humanoid") and monster.Humanoid.Health > 0 then
+						repeat
+							task.wait()
+							canSkill = true
+							type_farm(monster.HumanoidRootPart.CFrame)
+						until not Options[optionName].Value or monster.Humanoid.Health <= 0
+						canSkill = false
+						warp(chestHandler) -- Warp to the chest after defeating the monster
+					end
+				end)
+			end
+		else
+			-- Monster not found; attempt chest warp and server hop
+			canSkill = false
+			warp(chestHandler)
+			wait(0.5)
+			if Options["hop_seamonser"].Value then
+				warn("Hopping")
+				wait(8)
+				hopkl()
+			end
+		end
+	end
+	
+	-- Farming Loop
+	spawn(function()
+		while wait() do
+			if Options["autofarm_SeaKing"].Value and not first_world then
+				attack_seamonster("SeaKing", get_chest(), "autofarm_SeaKing")
+			end
+		end
+	end)
+	spawn(function()
+		while wait() do
+			if Options["autofarm_HydraSeaKing"].Value and not first_world then
+				attack_seamonster("HydraSeaKing",get_chest(),"autofarm_HydraSeaKing")
+			end
+		end
+	end)
+	local function get_chest_ship()
+		for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+			if string.find(v.Name,"Chest") then
+				warp(v.RootPart.CFrame * CFrame.new(0,4,0))
+                wait(.5)
+			end
+		end
+	end
+	local check_chest = 0
+
+	spawn(function()
+		while wait() do
+			if Options["ghost_ship"].Value and not first_world then
+				-- Check for Bullitus accessory and equip it if available
+				local hasBubble = game.Players.LocalPlayer:FindFirstChild("PlayerGui").MainGui.StarterFrame["Inventory_Frame"].ScrollingFrameAccessories:FindFirstChild("Bullitus")
+	
+				if not game.Players.LocalPlayer.Character:FindFirstChild("Bullitus") and hasBubble then
+					local args = { "Bullitus" }
+					game:GetService("ReplicatedStorage").Chest.Remotes.Functions.AccessoryEq:InvokeServer(unpack(args))
+				end
+	
+				-- Handle Ghost Ship farming
+				local ghostShipFolder = game:GetService("Workspace").GhostMonster
+				if ghostShipFolder:FindFirstChild("Ghost Ship") then
+					canSkill = false
+					check_chest = 0
+					for _, v in pairs(ghostShipFolder:GetChildren()) do
+						if v.Name == "Ghost Ship" and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+							canSkill = true
+							pcall(function()
+								repeat
+									task.wait()
+									type_farm(v.HumanoidRootPart.CFrame)
+								until not Options["ghost_ship"].Value or v.Humanoid.Health <= 0
+								canSkill = false
+							end)
+						else
+							canSkill = false
+							get_chest_ship()
+						end
+					end
+				elseif game:GetService("Workspace"):FindFirstChild("Chest1") and check_chest <= 5 then
+					-- Search for chests on the ship
+					canSkill = false
+					get_chest_ship()
+					check_chest += 1
+				else
+					-- Perform server hop if no ghost ship or chests found
+					canSkill = false
+					if Options["hop_ghostship"].Value then
+						warn("Hopping")
+						wait(8)
+						hopkl()
+					end
+				end
+			end
+		end
+	end)
+	spawn(function()
+		while wait() do
+			if Options["autofarm_monster"].Value and second_world then
+				local mons = Options["selected_monster"].Value
+				local monsterexist = game:GetService("Workspace").Monster.Boss:FindFirstChild(mons)
+				canSkill = false
+				if monsterexist then
+					for i,v in pairs(game:GetService("Workspace").Monster.Boss:GetChildren()) do
+						if v:IsA("Model") and v.Name == mons then
+							canSkill = true
+							pcall(function()
+								repeat task.wait()
+									type_farm(v.HumanoidRootPart.CFrame)
+								until not Options["autofarm_monster"].Value or v.Humanoid.Health <= 0
+								canSkill = false
+							end)
+						end
+					end
+				elseif game:GetService("ReplicatedStorage").MOB:FindFirstChild(mons) then
+					warp(game:GetService("Workspace").Island:FindFirstChild("A - Japan")["King Samurai Spawn"].CFrame)
+				elseif Options["hop_monster"].Value then
+					canSkill = false
+					warn("Hopping")
+					wait(5)
+					hopkl()
+				end
+			end
+		end
+	end)
+	local function attack_kaido(hee)
+		if game:GetService("Workspace").Monster.Boss:FindFirstChild(hee) then
+			canSkill = false
+			for i,v in pairs(game:GetService("Workspace").Monster.Boss:GetChildren()) do
+				if v.Name == hee and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and v:IsA("Model") then
+					canSkill = true
+					pcall(function()
+						repeat task.wait()
+							type_farm(v.HumanoidRootPart.CFrame)								
+						until not Options["auto_kaido"].Value or v:FindFirstChild("Humanoid").Health <= 0
+						canSkill = false
+					end)
+				end
+			end
+		else
+			warp(game:GetService("Workspace").Island:FindFirstChild("B - Skull Island").SummonAltar.Handle.CFrame * CFrame.new(0,-1,1))
+		end
+	end
+
+	spawn(function()
+		while wait() do
+			if Options["auto_kaido"].Value and second_world then
+				local dragon = "Dragon [Lv. 5000]"
+				local skeleton = "Elite Skeleton [Lv. 3100]"
+				local dragon_exist = game:GetService("Workspace").Monster.Boss:FindFirstChild(dragon)
+				local player = game.Players.LocalPlayer
+				local hasOrb = 	player.PlayerGui.MainGui.StarterFrame["Inventory_Frame"].ScrollingFrameMaterial:FindFirstChild("Dragon's Orb")
+				if hasOrb and not dragon_exist then
+					canSkill = false
+					EquipThing("Dragon's Orb") -- Function to equip the "Gem" weapon
+					if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+						warp(game:GetService("Workspace").Island:FindFirstChild("B - Skull Island").SummonAltar.Handle.CFrame * CFrame.new(0,-1,1))
+					end
+					clickquest("SummonDragon","SummonDragon")
+				elseif dragon_exist then
+					attack_kaido(dragon)
+				else
+					attack_kaido(skeleton)
+				end
+			end
+		end
+	end)
+	local function checkcrystal()
+		selectedcrystal = Options["selectedcrystal"].Value
+		if selectedcrystal == "Ice Crystal" then
+			Name_Crystal = "Ice Crystal"
+			Name_Find_Crystal = "Azlan [Lv. 3300]"
+			Name_Boss_Crystal = "The Ice King [Lv. 3350]"
+			Name_Quest = "Kill 1 The Ice King"
+			Level_Quest = 3350
+			Low_Level = "You must be Level 3,350 to accept this quest."
+			Island = CFrame.new(-793.7171630859375, 86.21017456054688, -2623.251220703125)
+		elseif selectedcrystal == "Magma Crystal" then
+			Name_Crystal = "Magma Crystal"
+			Name_Find_Crystal = "The Volcano [Lv. 3325]"
+			Name_Boss_Crystal = "The Crimson Demon [Lv. 3375]"
+			Name_Quest = "Kill 1 The Crimson Demon"
+			Level_Quest = 3375
+			Low_Level = "You must be Level 3,375 to accept this quest."
+			Island = CFrame.new(-154.6204376220703, 176.95199584960938, -3597.213134765625)
+		end
+	end
+	local function attack_crystal(love,what)
+		if game:GetService("Workspace").Monster[what]:FindFirstChild(love) then
+			magnet = false
+			canSkill = false
+			for i,v in pairs(game:GetService("Workspace").Monster[what]:GetChildren()) do
+				if v.Name == love and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and v:IsA("Model") then
+					pcall(function()
+						magnet = true
+						canSkill = true
+						mon = v:FindFirstChild("CFrameOrigin").Value
+						nM = v.Name
+						repeat task.wait()
+							type_farm(v.HumanoidRootPart.CFrame)							
+						until Options["auto_farm_crystal"].Value == false or v:FindFirstChild("Humanoid").Health <= 0
+						magnet = false
+						canSkill = false
+					end)
+				end
+			end
+		else
+			warp(Island)
+		end
+	end
+	spawn(function()
+		while wait() do
+			if Options["auto_farm_crystal"].Value and second_world then
+				checkcrystal()
+				local boss_exist = game:GetService("Workspace").Monster.Boss:FindFirstChild(Name_Boss_Crystal)
+				local player = game.Players.LocalPlayer
+				local hasCry = 	player.PlayerGui.MainGui.StarterFrame["Inventory_Frame"].ScrollingFrameMaterial:FindFirstChild(Name_Crystal)
+				if hasCry and not boss_exist then
+					local args = {
+					    [1] = "QuestSpawnBoss",
+					    [2] = {
+					        ["LevelLow"] = Low_Level,
+					        ["BossName"] = Name_Boss_Crystal,
+					        ["LevelNeed"] = Level_Quest,
+					        ["QuestName"] = Name_Quest,
+					        ["MaterialNeed"] = Name_Crystal,
+					        ["AI_Name"] = Name_Crystal,
+					        ["SuccessQuest"] = "Quest Accepted."
+					    }
+					}
+					game:GetService("ReplicatedStorage").Chest.Remotes.Functions.EtcFunction:InvokeServer(unpack(args))
+				elseif boss_exist then
+					attack_crystal(Name_Boss_Crystal,"Boss")
+				else
+					attack_crystal(Name_Find_Crystal,"Mon")
+				end
+			end
+		end
+	end)
+	spawn(function()
+		while wait(set_dealy_magnet) do
+			if magnet and Options["active_magnet"].Value then
+				local monsterFolder = game:GetService("Workspace").Monster.Mon
+				for _, monster in pairs(monsterFolder:GetChildren()) do
+					if monster.Name == nM and monster:IsA("Model") then
+						pcall(function()
+							monster.HumanoidRootPart.CanCollide = false
+							monster.HumanoidRootPart.CFrame = mon
+							monster.Head.CanCollide = false
+						end)
+						sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius",  math.huge)
+					end
+				end
+			end
+		end
+	end)
+end
+
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+SaveManager:IgnoreThemeSettings()
+SaveManager:SetIgnoreIndexes({})
+InterfaceManager:SetFolder("Hyper Space")
+SaveManager:SetFolder("Hyper Space/specific-Hyper")
+
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
+Window:SelectTab(0)
+SaveManager:LoadAutoloadConfig()
+warn("Anti AFK : Work")
+game:GetService("Players").LocalPlayer.Idled:Connect(function()
+	game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+end)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DookDekDEE/Hyper/refs/heads/main/close2.lua"))()
